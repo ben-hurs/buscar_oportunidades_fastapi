@@ -4,3 +4,4 @@ jinja2
 pandas
 nest_asyncio
 playwright==1.51.0
+python-multipart
