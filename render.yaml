@@ -1,9 +1,0 @@
-services:
-  - type: web
-    name: consulta-judicial
-    env: python
-    buildCommand: "pip install -r requirements.txt"
-    startCommand: "./start.sh"
-    envVars:
-      - key: PYTHON_VERSION
-        value: "3.10"
