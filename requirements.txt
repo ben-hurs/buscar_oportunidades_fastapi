@@ -1,0 +1,6 @@
+fastapi
+uvicorn[standard]
+jinja2
+pandas
+nest_asyncio
+playwright==1.51.0

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Consulta Judicial</title>
+</head>
+<body>
+    <h1>🔎 Consulta de Processos por Nome da Parte</h1>
+    <form method="post" action="/buscar">
+        <input type="text" name="nome_empresa" placeholder="Ex: Natura, Coca Cola" required>
+        <button type="submit">Buscar</button>
+    </form>
+
+    {% if erro %}
+        <p style="color:red;">Erro: {{ erro }}</p>
+    {% endif %}
+
+    {% if resultados %}
+        <h2>Resultados para {{ nome }}</h2>
+        <ul>
+            {% for item in resultados %}
+                <li><b>{{ item.numero_processo }}</b> - {{ item.classe }} ({{ item.tribunal }})</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
